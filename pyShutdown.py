@@ -69,6 +69,5 @@ def restart():
 # GPIO.remove_event_detect(5)
 GPIO.add_event_detect(5, GPIO.FALLING, callback=SHUT_REQ, bouncetime=300)
 
-# If dont cleanup, GPIO will remain in the last set state
-GPIO.cleanup()
+
 
