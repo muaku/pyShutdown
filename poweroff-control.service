@@ -1,0 +1,10 @@
+[Unit]
+Description=Poweroff controller
+
+[Service]
+ExecStart=/usr/bin/python /root/pyShutdown/pyShutdown.py
+Restart=always
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
