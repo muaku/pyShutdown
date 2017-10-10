@@ -4,6 +4,7 @@ import subprocess
 import signal
 from time import sleep
 
+GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)		# GPIO has 2 types of numbering system (this one is mainly used)
 GPIO.setup(5, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)		# set pin mode, set pin 5 as an INPUT (3th param is optional)
 GPIO.setup(6, GPIO.OUT)		# set pin 6 as an OUTPUT
@@ -28,7 +29,7 @@ def shutdown():
 	print(output)
 
 # Turn GPIO 06 to HIGH afap
-GPIO.ouput(6, GPIO.HIGH)
+GPIO.output(6, GPIO.HIGH)
 
 # Observe state
 def WDT():
