@@ -36,12 +36,12 @@ def WDT():
 	#  ouput 4min per 1 time
 	global state
 	if state:
+		GPIO.output(12, GPIO.HIGH)
 		state = False
 	else:
+		GPIO.output(12, GPIO.LOW)
 		state = True
 	threading.Timer(240, WDT).start()
-	GPIO.output(12, state)
-	print(state)
 
 WDT()
 
