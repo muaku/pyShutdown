@@ -16,7 +16,7 @@ state = False				# initialize state as LOW
 def SHUT_REQ():
 	# Start shutdown process
 	GPIO.output(6, GPIO.LOW)	# GPIO.LOW or 0 or False (SUT_ACK)
-	sleep(1)
+	sleep(2)
 	# TODO: Run SHUT_DOWN func
 	print("TODO: Shutdown process")
 	shutdown()
