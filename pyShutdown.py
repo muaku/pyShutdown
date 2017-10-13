@@ -13,7 +13,7 @@ GPIO.setup(13, GPIO.OUT)			# LED brink
 
 state = False				# initialize state as LOW
 
-def SHUT_REQ():
+def SHUT_REQ(param):
 	# Start shutdown process
 	GPIO.output(6, GPIO.LOW)	# GPIO.LOW or 0 or False (SUT_ACK)
 	sleep(2)

@@ -1,0 +1,15 @@
+[Unit]
+
+Description = speaker Daemon for Mimamori
+
+[Service]
+
+ExecStart = /usr/bin/python3 /root/Mimamori/Speaker/dequeue_buffer.py 
+
+Restart=always
+
+PIDFile=/root/
+
+[Install]
+
+WantedBy = multi-user.target
