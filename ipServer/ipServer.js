@@ -8,7 +8,7 @@ const SERVER_IP = ip.address()
 const SEND_PORT = 7001
 const RECV_PORT = 7000
 const IP_REQ = "IP_REQ"
-const resData = `SERVER_IP: ${SERVER_IP}, SERVER_HOSTNAME: ${SERVER_HOSTNAME}`
+const resData = `${SERVER_IP},${SERVER_HOSTNAME}`
 
 server.on("error", (err) => {
     console.log("server error: ", err)
@@ -20,7 +20,7 @@ server.on("message", (message, rinfo) => {
     console.log(resData)
     // If there is a REQ from tablet then send a server ip and hostname back
     if(message == IP_REQ) {
-        server.send(resData, 0, resData.length, SEND_PORT, CLIENT_IP)
+        server.send(resData, 0, resData.length, RECV_PORT, CLIENT_IP)
     }
 })
 server.on("listening", () => {
