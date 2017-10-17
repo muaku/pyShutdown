@@ -8,7 +8,7 @@ const SERVER_IP = ip.address()
 const SEND_PORT = 7001
 const RECV_PORT = 7000
 const IP_REQ = "IP_REQ"
-const resData = `${SERVER_IP},${SERVER_HOSTNAME}`
+const resData = "SERVER_RES"
 
 server.on("error", (err) => {
     console.log("server error: ", err)
