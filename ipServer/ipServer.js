@@ -25,6 +25,8 @@ server.on("message", (message, rinfo) => {
 })
 server.on("listening", () => {
     const address = server.address()
+    // when first run, broadcast ip addr
+    server.send(resData, 0, resData.length, RECV_PORT, CLIENT_IP)
     console.log(`server listening ${address.address}:${address.port}`)
 })
 
