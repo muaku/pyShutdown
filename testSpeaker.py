@@ -8,7 +8,7 @@ from time import sleep
 
 if __name__=='__main__':
     for i in range(0,3):
-        commandText = u'/root/AquesTalkPi \"こんにちはケニーさん.今日の笑顔はいいですね.何か良いことありましたか.\" | sox -t wav -c1 - -t wav -c2 /dev/stdout | aplay -Dhw:2,0'
+        commandText = u'/root/AquesTalkPi \"こんにちははるこおばあさん.今日の笑顔はいいですね.何か良いことありましたか.\" | sox -t wav -c1 - -t wav -c2 /dev/stdout | aplay -Dhw:2,0'
         subprocess.call(commandText, shell=True)
         sleep(3)
         commandText1 = u'/root/AquesTalkPi \"でも今朝は少しお熱があるみたい.\" | sox -t wav -c1 - -t wav -c2 /dev/stdout | aplay -Dhw:2,0'
