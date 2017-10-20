@@ -1,0 +1,8 @@
+[Unit]
+Description=Searching for robot ip
+[Service]
+ExecStart=/usr/bin/python /root/test_speaker/testSpeaker.py
+Restart=always
+Type=simple
+[Install]
+WantedBy=multi-user.target
