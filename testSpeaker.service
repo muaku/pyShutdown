@@ -1,7 +1,7 @@
 [Unit]
 Description=Searching for robot ip
 [Service]
-ExecStart=/usr/bin/python /root/test_speaker/testSpeaker.py
+ExecStart=/usr/bin/python /root/pyShutdown/testSpeaker.py
 Restart=always
 Type=simple
 [Install]
